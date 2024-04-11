@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="zh" dir="ltr" itemscope itemtype="https://schema.org/Game">
+  <head>
+    <title>国际象棋规则 — 清晰完整指南</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <!-- SEO -->
+    <meta name="description" content="清晰讲解国际象棋规则：开局摆放、棋子走法、王车易位、吃过路兵、兵升变、将军与将死、逼和与和棋（含50步规则）。">
+    <meta name="keywords" content="国际象棋规则, 国际象棋, 学国际象棋, 王车易位, 吃过路兵, 升变, 将死, 逼和, 和棋, 50步规则">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Cyril Veltin">
+
+    <!-- Canonical + languages -->
+    <link rel="canonical" href="https://zh.chess.page/">
+    <link rel="alternate" hreflang="en" href="https://en.chess.page/">
+    <link rel="alternate" hreflang="fr" href="https://fr.chess.page/">
+    <link rel="alternate" hreflang="ja" href="https://ja.chess.page/">
+    <link rel="alternate" hreflang="th" href="https://th.chess.page/">
+    <link rel="alternate" hreflang="zh" href="https://zh.chess.page/">
+    <link rel="alternate" hreflang="x-default" href="https://chess.page/">
+
+    <!-- Icon -->
+    <link rel="icon" type="image/svg+xml" sizes="any" href="favicon.svg">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/props.css" type="text/css" media="all">
+    <link rel="stylesheet" href="css/all.css" media="all">
+    <link rel="stylesheet" href="css/print.css" media="print">
+    <link rel="stylesheet" href="css/screen.css" media="screen">
+
+    <!-- License -->
+    <meta name="dcterms.rights" content="https://creativecommons.org/publicdomain/zero/1.0/">
+    <meta name="dcterms.rightsHolder" content="Cyril Veltin">
+    <meta name="license" content="CC0-1.0">
+    <link rel="license" href="https://creativecommons.org/publicdomain/zero/1.0/">
+
+    <!-- Open Graph -->
+    <meta property="og:site_name" content="Chess Page">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://zh.chess.page/">
+    <meta property="og:title" content="国际象棋规则 — 清晰完整指南">
+    <meta property="og:description" content="国际象棋规则：开局摆放、走子、特殊走法、将死、逼和与和棋（含50步规则）。">
+    <meta property="og:image" content="https://zh.chess.page/img/caissa-and-mercury-apollo-game.jpeg">
+    <meta property="og:image:alt" content="卡伊萨（Caïssa）插画（公有领域）。">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="国际象棋规则 — 清晰完整指南">
+    <meta name="twitter:description" content="清晰讲解国际象棋：棋子、走法、王车易位、吃过路兵、升变、将死、逼和与和棋。">
+    <meta name="twitter:image" content="https://zh.chess.page/img/caissa-and-mercury-apollo-game.jpeg">
+    <meta name="twitter:image:alt" content="卡伊萨（Caïssa）插画（公有领域）。">
+
+    <!-- Structured data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@id": "https://zh.chess.page/#game",
+        "@type": "Game",
+        "name": "国际象棋",
+        "alternateName": "棋类之王",
+        "description": "两人策略棋类游戏，在64格棋盘上进行。目标是将死对方国王（checkmate）从而获胜。",
+        "url": "https://zh.chess.page/",
+        "image": "https://zh.chess.page/img/caissa-and-mercury-apollo-game.jpeg",
+        "inLanguage": "zh-CN",
+        "numberOfPlayers": "2",
+        "keywords": [
+          "国际象棋",
+          "国际象棋规则",
+          "策略游戏",
+          "将死",
+          "棋子"
+        ],
+        "educationalUse": [
+          "策略",
+          "逻辑",
+          "预判"
+        ],
+        "offers": {
+          "@type": "Offer",
+          "availability": "https://schema.org/InStock",
+          "price": "0",
+          "priceCurrency": "EUR"
+        },
+        "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "copyrightHolder": {
+          "@type": "Person",
+          "name": "Cyril Veltin"
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <header>
+      <img src="favicon.svg" alt="Chess Page 标志" height="1024" width="1024">
+    </header>
+
+    <main>
+      <article>
+        <header>
+          <h1>国际象棋规则</h1>
+
+          <p>
+            <strong>国际象棋</strong>是<strong>两人</strong>策略游戏，在<strong>8 × 8</strong>（64格）的棋盘上进行。
+          </p>
+        </header>
+
+        <nav aria-label="目录">
+          <h2>目录</h2>
+          <ol>
+            <li><a href="./#objective">游戏目标</a></li>
+            <li><a href="./#setup">开局摆放</a></li>
+            <li><a href="./#piece-movement">棋子走法</a></li>
+            <li><a href="./#special-moves">特殊走法</a></li>
+            <li><a href="./#checkmate">将军与将死</a></li>
+            <li><a href="./#stalemate-and-draw">逼和与和棋</a></li>
+            <li><a href="./#end-of-game">对局结束</a></li>
+            <li><a href="./#art-and-literature">国际象棋与艺术文学</a></li>
+          </ol>
+        </nav>
+
+        <section id="objective">
+          <h2>游戏目标</h2>
+
+          <p>
+            目标是<strong>赢得对局</strong>：使<strong>对方国王被吃</strong>变得不可避免。
+          </p>
+
+          <p>
+            实际上，当出现<strong>将死（checkmate）</strong>时，对局立即结束：国王正在被攻击，且不存在任何<strong>合法着法</strong>能避免下一步被吃。
+          </p>
+
+          <p>
+            在国际象棋中，国王<strong>不会被实际吃掉</strong>：一旦将死成立，即判定胜负。
+          </p>
+        </section>
+
+        <section id="setup">
+          <h2>开局摆放</h2>
+
+          <h3>棋盘</h3>
+          <ul>
+            <li>棋盘为<strong>8列</strong>、<strong>8行</strong>的方格。</li>
+            <li>方格颜色深浅相间。</li>
+            <li>摆放棋盘时，每位玩家右下角必须是<strong>浅色格</strong>。</li>
+          </ul>
+
+          <h3>行棋顺序</h3>
+          <ul>
+            <li><strong>白方</strong>先行。</li>
+            <li>随后<strong>黑方</strong>行棋，双方轮流走子。</li>
+          </ul>
+
+          <h3>初始棋子</h3>
+          <ul>
+            <li>每方共<strong>16枚</strong>：国王1、后1、车2、象2、马2、兵8。</li>
+            <li>靠近玩家的一排摆放主力棋子（国王、后、车、象、马）。</li>
+            <li>其前一排摆放兵。</li>
+          </ul>
+
+          <h3>第一排的摆放顺序</h3>
+          <p>
+            从白方视角，第一排从左到右依次为：
+            <strong>车</strong>、<strong>马</strong>、<strong>象</strong>、<strong>后</strong>、<strong>王</strong>、
+            <strong>象</strong>、<strong>马</strong>、<strong>车</strong>。
+          </p>
+
+          <p>
+            <strong>白后</strong>起始在<strong>浅色格</strong>，
+            <strong>黑后</strong>起始在<strong>深色格</strong>。
+          </p>
+
+          <p>开局位置如下：</p>
+
+          <table class="squares" aria-label="国际象棋开局棋盘">
+            <caption>国际象棋的标准开局位置。</caption>
+
+            <tbody>
+              <tr class="rank">
+                <td class="square" data-coordinate="a8" aria-label="a8，黑车">
+                  <img class="piece" draggable="true" data-code="c:r" data-style="chess" data-side="second" src="img/sides/second/representations/western/rook.svg" alt="黑车">
+                </td>
+                <td class="square" data-coordinate="b8" aria-label="b8，黑马">
+                  <img class="piece" draggable="true" data-code="c:n" data-style="chess" data-side="second" src="img/sides/second/representations/western/knight.svg" alt="黑马">
+                </td>
+                <td class="square" data-coordinate="c8" aria-label="c8，黑象">
+                  <img class="piece" draggable="true" data-code="c:b" data-style="chess" data-side="second" src="img/sides/second/representations/western/bishop.svg" alt="黑象">
+                </td>
+                <td class="square" data-coordinate="d8" aria-label="d8，黑后">
+                  <img class="piece" draggable="true" data-code="c:q" data-style="chess" data-side="second" src="img/sides/second/representations/western/queen.svg" alt="黑后">
+                </td>
+                <td class="square" data-coordinate="e8" aria-label="e8，黑王">
+                  <img class="piece" draggable="true" data-code="c:k^" data-style="chess" data-side="second" src="img/sides/second/representations/western/king.svg" alt="黑王">
+                </td>
+                <td class="square" data-coordinate="f8" aria-label="f8，黑象">
+                  <img class="piece" draggable="true" data-code="c:b" data-style="chess" data-side="second" src="img/sides/second/representations/western/bishop.svg" alt="黑象">
+                </td>
+                <td class="square" data-coordinate="g8" aria-label="g8，黑马">
+                  <img class="piece" draggable="true" data-code="c:n" data-style="chess" data-side="second" src="img/sides/second/representations/western/knight.svg" alt="黑马">
+                </td>
+                <td class="square" data-coordinate="h8" aria-label="h8，黑车">
+                  <img class="piece" draggable="true" data-code="c:r" data-style="chess" data-side="second" src="img/sides/second/representations/western/rook.svg" alt="黑车">
+                </td>
+              </tr>
+
+              <tr class="rank">
+                <td class="square" data-coordinate="a7" aria-label="a7，黑兵">
+                  <img class="piece" draggable="true" data-code="c:p" data-style="chess" data-side="second" src="img/sides/second/representations/western/pawn.svg" alt="黑兵">
+                </td>
+                <td class="square" data-coordinate="b7" aria-label="b7，黑兵">
+                  <img class="piece" draggable="true" data-code="c:p" data-style="chess" data-side="second" src="img/sides/second/representations/western/pawn.svg" alt="黑兵">
+                </td>
+                <td class="square" data-coordinate="c7" aria-label="c7，黑兵">
+                  <img class="piece" draggable="true" data-code="c:p" data-style="chess" data-side="second" src="img/sides/second/representations/western/pawn.svg" alt="黑兵">
+                </td>
+                <td class="square" data-coordinate="d7" aria-label="d7，黑兵">
+                  <img class="piece" draggable="true" data-code="c:p" data-style="chess" data-side="second" src="img/sides/second/representations/western/pawn.svg" alt="黑兵">
+                </td>
+                <td class="square" data-coordinate="e7" aria-label="e7，黑兵">
+                  <img class="piece" draggable="true" data-code="c:p" data-style="chess" data-side="second" src="img/sides/second/representations/western/pawn.svg" alt="黑兵">
+                </td>
+                <td class="square" data-coordinate="f7" aria-label="f7，黑兵">
+                  <img class="piece" draggable="true" data-code="c:p" data-style="chess" data-side="second" src="img/sides/second/representations/western/pawn.svg" alt="黑兵">
+                </td>
+                <td class="square" data-coordinate="g7" aria-label="g7，黑兵">
+                  <img class="piece" draggable="true" data-code="c:p" data-style="chess" data-side="second" src="img/sides/second/representations/western/pawn.svg" alt="黑兵">
+                </td>
+                <td class="square" data-coordinate="h7" aria-label="h7，黑兵">
+                  <img class="piece" draggable="true" data-code="c:p" data-style="chess" data-side="second" src="img/sides/second/representations/western/pawn.svg" alt="黑兵">
+                </td>
+              </tr>
+
+              <tr class="rank">
+                <td class="square" data-coordinate="a6" aria-label="a6，空格"></td>
+                <td class="square" data-coordinate="b6" aria-label="b6，空格"></td>
+                <td class="square" data-coordinate="c6" aria-label="c6，空格"></td>
+                <td class="square" data-coordinate="d6" aria-label="d6，空格"></td>
+                <td class="square" data-coordinate="e6" aria-label="e6，空格"></td>
+                <td class="square" data-coordinate="f6" aria-label="f6，空格"></td>
+                <td class="square" data-coordinate="g6" aria-label="g6，空格"></td>
+                <td class="square" data-coordinate="h6" aria-label="h6，空格"></td>
+              </tr>
+
+              <tr class="rank">
+                <td class="square" data-coordinate="a5" aria-label="a5，空格"></td>
+                <td class="square" data-coordinate="b5" aria-label="b5，空格"></td>
+                <td class="square" data-coordinate="c5" aria-label="c5，空格"></td>
+                <td class="square" data-coordinate="d5" aria-label="d5，空格"></td>
+                <td class="square" data-coordinate="e5" aria-label="e5，空格"></td>
+                <td class="square" data-coordinate="f5" aria-label="f5，空格"></td>
+                <td class="square" data-coordinate="g5" aria-label="g5，空格"></td>
+                <td class="square" data-coordinate="h5" aria-label="h5，空格"></td>
+              </tr>
+
+              <tr class="rank">
+                <td class="square" data-coordinate="a4" aria-label="a4，空格"></td>
+                <td class="square" data-coordinate="b4" aria-label="b4，空格"></td>
+                <td class="square" data-coordinate="c4" aria-label="c4，空格"></td>
+                <td class="square" data-coordinate="d4" aria-label="d4，空格"></td>
+                <td class="square" data-coordinate="e4" aria-label="e4，空格"></td>
+                <td class="square" data-coordinate="f4" aria-label="f4，空格"></td>
+                <td class="square" data-coordinate="g4" aria-label="g4，空格"></td>
+                <td class="square" data-coordinate="h4" aria-label="h4，空格"></td>
+              </tr>
+
+              <tr class="rank">
+                <td class="square" data-coordinate="a3" aria-label="a3，空格"></td>
+                <td class="square" data-coordinate="b3" aria-label="b3，空格"></td>
+                <td class="square" data-coordinate="c3" aria-label="c3，空格"></td>
+                <td class="square" data-coordinate="d3" aria-label="d3，空格"></td>
+                <td class="square" data-coordinate="e3" aria-label="e3，空格"></td>
+                <td class="square" data-coordinate="f3" aria-label="f3，空格"></td>
+                <td class="square" data-coordinate="g3" aria-label="g3，空格"></td>
+                <td class="square" data-coordinate="h3" aria-label="h3，空格"></td>
+              </tr>
+
+              <tr class="rank">
+                <td class="square" data-coordinate="a2" aria-label="a2，白兵">
+                  <img class="piece" draggable="true" data-code="C:P" data-style="chess" data-side="first" src="img/sides/first/representations/western/pawn.svg" alt="白兵">
+                </td>
+                <td class="square" data-coordinate="b2" aria-label="b2，白兵">
+                  <img class="piece" draggable="true" data-code="C:P" data-style="chess" data-side="first" src="img/sides/first/representations/western/pawn.svg" alt="白兵">
+                </td>
+                <td class="square" data-coordinate="c2" aria-label="c2，白兵">
+                  <img class="piece" draggable="true" data-code="C:P" data-style="chess" data-side="first" src="img/sides/first/representations/western/pawn.svg" alt="白兵">
+                </td>
+                <td class="square" data-coordinate="d2" aria-label="d2，白兵">
+                  <img class="piece" draggable="true" data-code="C:P" data-style="chess" data-side="first" src="img/sides/first/representations/western/pawn.svg" alt="白兵">
+                </td>
+                <td class="square" data-coordinate="e2" aria-label="e2，白兵">
+                  <img class="piece" draggable="true" data-code="C:P" data-style="chess" data-side="first" src="img/sides/first/representations/western/pawn.svg" alt="白兵">
+                </td>
+                <td class="square" data-coordinate="f2" aria-label="f2，白兵">
+                  <img class="piece" draggable="true" data-code="C:P" data-style="chess" data-side="first" src="img/sides/first/representations/western/pawn.svg" alt="白兵">
+                </td>
+                <td class="square" data-coordinate="g2" aria-label="g2，白兵">
+                  <img class="piece" draggable="true" data-code="C:P" data-style="chess" data-side="first" src="img/sides/first/representations/western/pawn.svg" alt="白兵">
+                </td>
+                <td class="square" data-coordinate="h2" aria-label="h2，白兵">
+                  <img class="piece" draggable="true" data-code="C:P" data-style="chess" data-side="first" src="img/sides/first/representations/western/pawn.svg" alt="白兵">
+                </td>
+              </tr>
+
+              <tr class="rank">
+                <td class="square" data-coordinate="a1" aria-label="a1，白车">
+                  <img class="piece" draggable="true" data-code="C:R" data-style="chess" data-side="first" src="img/sides/first/representations/western/rook.svg" alt="白车">
+                </td>
+                <td class="square" data-coordinate="b1" aria-label="b1，白马">
+                  <img class="piece" draggable="true" data-code="C:N" data-style="chess" data-side="first" src="img/sides/first/representations/western/knight.svg" alt="白马">
+                </td>
+                <td class="square" data-coordinate="c1" aria-label="c1，白象">
+                  <img class="piece" draggable="true" data-code="C:B" data-style="chess" data-side="first" src="img/sides/first/representations/western/bishop.svg" alt="白象">
+                </td>
+                <td class="square" data-coordinate="d1" aria-label="d1，白后">
+                  <img class="piece" draggable="true" data-code="C:Q" data-style="chess" data-side="first" src="img/sides/first/representations/western/queen.svg" alt="白后">
+                </td>
+                <td class="square" data-coordinate="e1" aria-label="e1，白王">
+                  <img class="piece" draggable="true" data-code="C:K^" data-style="chess" data-side="first" src="img/sides/first/representations/western/king.svg" alt="白王">
+                </td>
+                <td class="square" data-coordinate="f1" aria-label="f1，白象">
+                  <img class="piece" draggable="true" data-code="C:B" data-style="chess" data-side="first" src="img/sides/first/representations/western/bishop.svg" alt="白象">
+                </td>
+                <td class="square" data-coordinate="g1" aria-label="g1，白马">
+                  <img class="piece" draggable="true" data-code="C:N" data-style="chess" data-side="first" src="img/sides/first/representations/western/knight.svg" alt="白马">
+                </td>
+                <td class="square" data-coordinate="h1" aria-label="h1，白车">
+                  <img class="piece" draggable="true" data-code="C:R" data-style="chess" data-side="first" src="img/sides/first/representations/western/rook.svg" alt="白车">
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p>
+            如无特别说明，棋盘图均以白方视角展示（白方在图的下方）。
+          </p>
+        </section>
+
+        <section id="piece-movement">
+          <h2>棋子走法</h2>
+
+          <h3>基本原则</h3>
+          <ul>
+            <li>每回合玩家走<strong>一步</strong>：移动己方<strong>一枚</strong>棋子。</li>
+            <li>棋子移动到一个<strong>目标格</strong>。</li>
+            <li>目标格必须<strong>为空</strong>或被<strong>对方棋子</strong>占据。</li>
+            <li>不能走到己方棋子所在的格子。</li>
+            <li>若目标格有对方棋子，则该棋子被<strong>吃掉</strong>并移出棋盘。</li>
+            <li>除马以外，棋子不能越子：路径上的格子必须为空。</li>
+            <li>任何使己方国王处于<strong>将军</strong>状态（或仍处于将军状态）的走法均为<strong>非法着法</strong>。</li>
+          </ul>
+
+          <h3>各棋子走法</h3>
+
+          <h4>王（King）</h4>
+          <ul>
+            <li>王可向任意方向（横、竖、斜）走<strong>一格</strong>。</li>
+            <li>吃子方式相同（走一格）。</li>
+          </ul>
+
+          <h4>后（Queen）</h4>
+          <ul>
+            <li>后可沿直线（横、竖、斜）走任意格，路径必须畅通。</li>
+            <li>吃子方式相同。</li>
+          </ul>
+
+          <h4>车（Rook）</h4>
+          <ul>
+            <li>车可横向或纵向走任意格，路径必须畅通。</li>
+            <li>吃子方式相同。</li>
+          </ul>
+
+          <h4>象（Bishop）</h4>
+          <ul>
+            <li>象可沿对角线走任意格，路径必须畅通。</li>
+            <li>吃子方式相同。</li>
+          </ul>
+
+          <h4>马（Knight）</h4>
+          <ul>
+            <li>马走“日”字：先在一个方向走2格（横或竖），再垂直方向走1格。</li>
+            <li>马可以<strong>跳过</strong>其他棋子。</li>
+            <li>吃子时落在对方棋子所在格。</li>
+          </ul>
+
+          <h4>兵（Pawn）</h4>
+          <p>
+            兵的走法与吃法不同。
+            白方“前进”指向棋盘图上方；黑方“前进”指向棋盘图下方。
+          </p>
+          <ul>
+            <li>兵向前走<strong>一格</strong>（目标格必须为空）。</li>
+            <li>兵首次移动时，如前方两格均为空，可向前走<strong>两格</strong>。</li>
+            <li>兵吃子为向前斜走<strong>一格</strong>（左前或右前）。</li>
+            <li>兵不能直走吃子。</li>
+          </ul>
+        </section>
+
+        <section id="special-moves">
+          <h2>特殊走法</h2>
+
+          <dl>
+            <dt>王车易位（Castling）</dt>
+            <dd>
+              <p>
+                王车易位是王与同侧的一辆车共同完成的特殊走法：
+                王向该车方向移动<strong>两格</strong>，随后那辆车移动到王的另一侧、紧挨王的格子上。
+              </p>
+
+              <p>王车易位仅在同时满足以下条件时才允许：</p>
+              <ul>
+                <li>王尚未移动过；</li>
+                <li>参与易位的车尚未移动过；</li>
+                <li>王与该车之间没有任何棋子；</li>
+                <li>易位时王<strong>不处于将军</strong>；</li>
+                <li>王<strong>不穿过</strong>被攻击的格子；</li>
+                <li>王落点格<strong>不被攻击</strong>。</li>
+              </ul>
+            </dd>
+
+            <dt>吃过路兵（En passant）</dt>
+            <dd>
+              <p>
+                吃过路兵只适用于兵。
+                若对方兵从初始位置前进两格，并停在与己方兵横向相邻的位置，
+                己方兵可在下一手将其吃掉，视同该兵只前进了一格。
+              </p>
+
+              <p>
+                吃子时，己方兵向前斜走一格至“被跨越”的格子，对方兵从棋盘上移除。
+              </p>
+
+              <p>
+                吃过路兵只能在对方走两格后的<strong>紧接着一回合</strong>进行；
+                若错过该时机，则失去此权利。
+              </p>
+            </dd>
+
+            <dt>兵升变（Promotion）</dt>
+            <dd>
+              <p>
+                当兵到达对方底线（最后一行）时，兵必须<strong>升变</strong>：
+                兵被替换为同色的<strong>后</strong>、<strong>车</strong>、<strong>象</strong>或<strong>马</strong>。
+              </p>
+
+              <p>
+                不能升变为王。
+                升变不要求先有被吃掉的棋子可用，因此可能出现多后。
+              </p>
+            </dd>
+          </dl>
+        </section>
+
+        <section id="checkmate">
+          <h2>将军与将死</h2>
+
+          <h3>定义</h3>
+          <ul>
+            <li><strong>将军（Check）</strong>：国王被对方至少一枚棋子攻击。</li>
+            <li><strong>解将</strong>：走一步合法着法，使国王不再被攻击。</li>
+            <li><strong>将死（Checkmate）</strong>：国王被将军且无任何合法着法可以解将。</li>
+          </ul>
+
+          <h3>是否必须喊“将”？</h3>
+          <p>
+            可以口头提示“将”，但并非规则要求。
+            判断依据始终是棋盘上的真实局面。
+          </p>
+
+          <h3>国王被将军时可以怎么做？</h3>
+          <p>当国王被将军时，必须走一步合法着法解将，例如：</p>
+          <ul>
+            <li>将王移到不被攻击的格子；</li>
+            <li>吃掉进攻棋子（且吃后王不再被攻击）；</li>
+            <li>用棋子挡住攻击路线（仅适用于远程攻击：车、象、后）。</li>
+          </ul>
+        </section>
+
+        <section id="stalemate-and-draw">
+          <h2>逼和与和棋</h2>
+
+          <h3>逼和（Stalemate）</h3>
+          <p>
+            若轮到某方走棋时：
+            (1) 该方国王<strong>未被将军</strong>，且
+            (2) 该方没有任何<strong>合法着法</strong>，
+            则为<strong>逼和</strong>，对局判<strong>和棋</strong>。
+          </p>
+
+          <h3>其他和棋情况</h3>
+          <ul>
+            <li>
+              <strong>双方协议和棋</strong>：双方可以同意和棋。
+            </li>
+            <li>
+              <strong>子力不足和棋</strong>：任一方都无法在完美走法下将死对方
+              （典型例子：王对王；王+象对王；王+马对王）。
+            </li>
+            <li>
+              <strong>三次重复和棋</strong>：同一局面出现三次（同一方走棋，且权利相同，例如易位/吃过路兵权利），
+              可判和棋。是否为申诉制或自动判定，取决于比赛规则或平台设置。
+            </li>
+            <li>
+              <strong>50步规则</strong>：若连续<strong>50步（每方50步，共100个半步）</strong>期间没有任何吃子且没有任何兵的移动，
+              可判和棋（申诉或自动，视规则而定）。
+            </li>
+            <li>
+              <strong>死局（Dead position）</strong>：无论双方如何走，都不可能出现将死的局面；
+              该情况下直接判和棋，与轮到哪方无关。
+            </li>
+          </ul>
+        </section>
+
+        <section id="end-of-game">
+          <h2>对局结束</h2>
+
+          <ul>
+            <li>对局可因<strong>将死</strong>（胜负已定）、<strong>认输</strong>或<strong>和棋</strong>而结束。</li>
+            <li>玩家可在任意时刻<strong>认输</strong>，表示承认失败。</li>
+            <li>在计时对局中，玩家可能因<strong>超时</strong>而判负，具体取决于所采用的时间规则。</li>
+            <li>在软件实现中，非法着法（例如让国王处于将军状态）通常会被直接拒绝。</li>
+          </ul>
+        </section>
+
+        <section id="art-and-literature">
+          <h2>国际象棋与艺术文学</h2>
+
+          <p>
+            国际象棋启发了许多作品。以下是两部常被提及的经典：
+          </p>
+
+          <dl>
+            <dt><q lang="la">Scacchi ludus</q> (1527) — Marco Girolamo Vida</dt>
+            <dd>描写诸神之间神话般对弈的诗作。</dd>
+
+            <dt><q lang="en">Caïssa: or The Game of Chess</q> (1772) — William Jones</dt>
+            <dd>使“卡伊萨（Caïssa）”成为与国际象棋相关的拟人意象的诗作。</dd>
+          </dl>
+
+          <figure>
+            <img
+              src="img/caissa-and-mercury-apollo-game.jpeg"
+              alt="与卡伊萨相关的神话场景插画"
+              title="卡伊萨插画"
+              loading="lazy">
+            <figcaption>卡伊萨插画（公有领域）。</figcaption>
+          </figure>
+        </section>
+      </article>
+
+      <aside aria-label="另请参阅">
+        <h2>另请参阅</h2>
+        <p>国际象棋家族中的文化变体：</p>
+
+        <ul>
+          <li>
+            <strong><a href="https://zh.ogi.page/" rel="external">Ōgi（王棋）</a></strong> —
+            源自将棋的日本风格变体，棋盘更小，并允许重新使用被吃掉的棋子。
+          </li>
+          <li>
+            <strong><a href="https://zh.xiongqi.page/" rel="external">Xiongqi（熊棋）</a></strong> —
+            “熊猫象棋”，在8 × 8棋盘上进行，融合了中式与西式元素的改编玩法。
+          </li>
+        </ul>
+      </aside>
+
+      <nav aria-label="语言选择">
+        <h2>语言</h2>
+        <p>本页面也提供其他语言版本：</p>
+
+        <ul>
+          <li><a title="Switch to English" href="https://en.chess.page/" lang="en">English</a></li>
+          <li><a title="Passer en français" href="https://fr.chess.page/" lang="fr">Français</a></li>
+          <li><a title="日本語に切り替える" href="https://ja.chess.page/" lang="ja">日本語</a></li>
+          <li><a title="สลับเป็นภาษาไทย" href="https://th.chess.page/" lang="th">ภาษาไทย</a></li>
+          <!-- <li><a title="切换到中文" href="https://zh.chess.page/" lang="zh">中文</a></li> -->
+        </ul>
+      </nav>
+    </main>
+
+    <footer>
+      <p>
+        本页面及其内容已通过
+        <a rel="license external" href="https://creativecommons.org/publicdomain/zero/1.0/">CC0 1.0</a>
+        置入公有领域。您可以自由复制、修改与再发布，无需许可。
+      </p>
+    </footer>
+  </body>
+</html>
